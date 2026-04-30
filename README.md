@@ -83,10 +83,10 @@ $$
 
 where $B$ is a small amplitude.
 
-Single-scale interference:
+**Single-scale interference:**
 
 $$
-S_s(\mathbf{q}) = 2 \operatorname{Re} \bigl[ \psi_P^*(\mathbf{q}) \cdot \psi_{\mathbf{q}}(\mathbf{q}) \bigr]
+S_s(\mathbf{q}) = 2 \, \mathrm{Re} \bigl[ \psi_P^*(\mathbf{q}) \cdot \psi_{\mathbf{q}}(\mathbf{q}) \bigr]
 $$
 
 Multi-scale total score:
