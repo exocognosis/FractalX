@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fractalx"
+version = "0.1.0"
+description = "Reference testing framework for the FractalX recommendation scoring proposal."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC-BY-4.0" }
+authors = [
+  { name = "Rick Glenn" }
+]
+dependencies = [
+  "numpy>=1.24"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

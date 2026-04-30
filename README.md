@@ -165,6 +165,29 @@ Adjacent lines of work this framework draws from or sits alongside:
 
 The novel contributions here are the **interference-as-filter framing** and the **explicit coupling of fractal-dimension regularization with multi-scale phase superposition** as a single ranking signal.
 
+## Reference Implementation and Tests
+
+This repository includes a small Python reference package under [src/fractalx](src/fractalx) and a pytest suite under [tests](tests).
+
+Install and run the tests from a fresh checkout:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[test]"
+python -m pytest
+```
+
+The current suite checks:
+
+- Box-counting dimension estimates on known synthetic point clouds.
+- Degenerate and invalid input handling.
+- Constructive versus destructive interference behavior.
+- Multi-scale score weighting.
+- Hybrid combination with a transformer ranking score.
+
+See [docs/testing.md](docs/testing.md) for the detailed testing workflow and [docs/validation-framework.md](docs/validation-framework.md) for the larger empirical validation plan.
+
 ## Contributing
 
 Feedback, issues, pull requests, experiments, and implementation notes are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).

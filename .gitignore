@@ -4,6 +4,7 @@ Thumbs.db
 # Editor and local environment files
 .idea/
 .vscode/
+.venv/
 *.swp
 *.swo
 *~
@@ -12,5 +13,6 @@ Thumbs.db
 __pycache__/
 .pytest_cache/
 .coverage
+*.egg-info/
 dist/
 build/
