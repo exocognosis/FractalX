@@ -37,7 +37,11 @@ Let $\mathcal{E} \subset \mathbb{R}^d$ be the post embedding space.
 A user's weighted engagement history forms the point cloud:
 
 $$
-P = \{ (\mathbf{p}_i, A_i) \}_{i=1}^n, \quad \mathbf{p}_i \in \mathcal{E}, \ A_i \geq 0
+\begin{aligned}
+P &= \{(\mathbf{p}_i, A_i)\}_{i=1}^{n} \\
+\mathbf{p}_i &\in \mathcal{E} \subset \mathbb{R}^{d} \\
+A_i &\geq 0
+\end{aligned}
 $$
 
 where $A_i$ is the engagement strength, such as likes, replies, dwell time, or other weighted interaction signals.
@@ -88,7 +92,13 @@ $$
 Phase function, multi-scale:
 
 $$
-\phi_{i,s}(\mathbf{x}) = 2\pi \, \frac{\mathbf{k} \cdot (\mathbf{x} - \mathbf{p}_i)}{\lambda_s}, \quad \lambda_s = \lambda_0 \cdot 2^{-(s-1)}
+\begin{aligned}
+\phi_{i,s}(\mathbf{x})
+&= 2\pi \,
+\frac{\mathbf{k} \cdot (\mathbf{x} - \mathbf{p}_i)}{\lambda_s} \\
+\lambda_s
+&= \lambda_0 \cdot 2^{-(s-1)}
+\end{aligned}
 $$
 
 where:
@@ -116,18 +126,20 @@ $$
 Multi-scale total score:
 
 $$
-\tilde{w}_s =
+\begin{aligned}
+\tilde{w}_s
+&=
 2^{-(s-1)}
 \left(
 1 + \beta \rho \frac{s-1}{S_{\max}-1}
-\right)
+\right) \\
+w_s
+&=
+\frac{\tilde{w}_s}{\sum_{j=1}^{S_{\max}} \tilde{w}_j}
+\end{aligned}
 $$
 
 For $S_{\max}=1$, the fine-scale fraction is defined as zero.
-
-$$
-w_s = \frac{\tilde{w}_s}{\sum_j \tilde{w}_j}
-$$
 
 $$
 S_{\text{raw}}(\mathbf{q}) = \sum_{s=1}^{S_{\max}} w_s \, S_s(\mathbf{q})
@@ -266,6 +278,8 @@ Outside those regimes, the honest answer is: train the bigger model, and treat F
 ## Reference Implementation and Tests
 
 This repository includes a small Python reference package under [src/fractalx](src/fractalx), a standalone prototype in [prototype.py](prototype.py), a MovieLens evaluation harness in [evaluate.py](evaluate.py), and a pytest suite under [tests](tests).
+
+For an immediate visual walkthrough, open [examples/quick_demo.ipynb](examples/quick_demo.ipynb). It generates a synthetic fractal-like user history, estimates intrinsic dimension, scores a good post against a garbage post, and plots the 2D geometry.
 
 Install and run the tests from a fresh checkout:
 
