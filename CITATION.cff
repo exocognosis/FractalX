@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use or discuss this framework, please cite it."
+title: "Fractal Interference Framework for Hierarchical User Interest Modeling in Recommendation Systems"
+authors:
+  - family-names: "Glenn"
+    given-names: "Rick"
+date-released: 2026-04-30
+license: "CC-BY-4.0"
+repository-code: "https://github.com/exocognosis/FractalX"
+abstract: "A proposal for improving personalization in recommendation systems by modeling user engagement history as a fractal point cloud and scoring candidates through multi-scale complex-valued interference."

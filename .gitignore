@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+
+# Editor and local environment files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Runtime and generated artifacts
+__pycache__/
+.pytest_cache/
+.coverage
+dist/
+build/
